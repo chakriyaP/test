@@ -1,0 +1,107 @@
+<resources>
+    // App
+    <string name="app_name">Swabook</string>
+    // Login
+    <string name="user">\tชื่อผู้ใช้</string>
+    <string name="password">\tรหัสผ่าน</string>
+    <string name="hint_username">ชื่อผู้ใช้</string>
+    <string name="hint_password">รหัสผ่าน</string>
+    <string name="login_btn">ลงชื่อเข้าใช้</string>
+    <string name="forgot_password"><u>คุณลืมรหัสผ่าน?</u></string>
+    <string name="third_party"> เข้าสู่ระบบด้วย</string>
+    <string name="register">คุณยังไม่มีบัญชี ? สมัครสมาชิก</string>
+    // Register
+    <string name="register_text">สร้างบัญชีผู้ใช้</string>
+    <string name="hint_email">อีเมล</string>
+    <string name="hint_confirm_password">ยืนยันรหัสผ่าน</string>
+    <string name="register_btn_text">ลงทะเบียน</string>
+    // Reset Password
+    <string name="forgot_password_text">ลืมรหัสผ่าน</string>
+    <string name="text_about_change_password">เราจะส่งคำขอปลี่ยนรหัสผ่านไปที่อีเมลของคุณ</string>
+    <string name="change_password_btn">เปลี่ยนรหัสผ่าน</string>
+    // Book
+    <string name="post_by_user">โพสต์ โดย </string>
+    <string name="book_name">ชื่อหนังสือ</string>
+    <string name="author_name">ชื่อผู้แต่ง</string>
+    <string name="synopsis">เรื่องย่อและระลายเอียดของหนังสือ…</string>
+    <string name="book_name_title">ชื่อหนังสือ :</string>
+    <string name="author_name_title">ชื่อผู้แต่ง :</string>
+    <string name="detail">รายละเอียดเพิ่มเติม :</string>
+    <string name="borrow_btn">ขอยืมหนังสือ</string>
+    // Post
+    <string name="post_btn">โพสต์</string>
+    <string name="hint_book">ชื่อหนังสือ</string>
+    <string name="hint_author">ชื่อผู้แต่ง</string>
+    <string name="hint_detail">รายละเอียดหนังสือ</string>
+    <string name="hint_category">หมวดหมู่</string>
+    <string-array name="category">
+        <item>การ์ตูน</item>
+        <item>นิยาย</item>
+        <item>หนังสือเรียน</item>
+        <item>สารคดี</item>
+    </string-array>
+    // Profile
+    <string name="user_name">ชื่อผู้ใช้</string>
+    <string name="userID">"@userID"</string>
+    <string name="my_book">หนังสือของฉัน</string>
+    <string name="borrow_history">ประวัติการยืม-คืน</string>
+    <string name="setting">ตั้งค่า</string>
+    <string name="sign_out">ออกจากระบบ</string>
+    <string name="edit_profile">แก้ไขโปรไฟล์</string>
+    // Edit Profile
+    <string name="change_userName">เปลี่ยนชื่อผู้ใช้</string>
+    <string name="bio_user">เกี่ยวกับคุณ</string>
+    <string name="update_user">อัพเดทข้อมูล</string>
+    // My Book
+    <string name="mybook_edit_btn">แก้ไขข้อมูล</string>
+    // Error
+    <string name="error_user">กรุณากรอกบัญชีผู้ใช้</string>
+    <string name="error_password">รหัสผ่านไม่ถูกต้อง</string>
+    <string name="error_space">กรุณาเติมช่องว่าง</string>
+    <string name="error_password_8digi">รหัสต้องมีความยาวมากกว่า 8 ตัวอักษร</string>
+    <string name="confirmPassword">รหัสผ่านไม่ตรงกัน</string>
+    <string name="rePassword">รหัสผ่านไม่ตรงกัน กรุณากรอกใหม่</string>
+    <string name="error_book">กรุณากรอกช้อมูลงในช่องว่าง"</string>
+    <string name="error_bookDetail">กรุณากรอกช้อมูลอย่างน้อย 10 ตัวอักษร"</string>
+    // Menu
+    <string name="share">แชร์</string>
+    // Bottom Nav
+    <string name="browse_nav_btn">Browse</string>
+    <string name="search_nav_btn">Search</string>
+    <string name="post_nav_btn">Post</string>
+    <string name="noti_nav_btn">Notifications</string>
+    <string name="profile_nav_btn">Profile</string>
+    // Search
+    <string name="hint_search">ค้นหาชื่อหนังสือ</string>
+    <string name="search_btn">ค้นหา</string>
+    <string name="category_name_text">การ์ตูน</string>
+    // Chat
+    <string name="chat_text">แชท</string>
+    <string name="enter_chat">พิมพ์ข้อความ...</string>
+    // Other
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Preference Titles -->
+    <string name="account_header">บัญชีผู้ใช้</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Account Preferences -->
+    <string name="account_title">เปลี่ยนชื่อบัญชีผู้ใช้</string>
+    <string name="password_title">เปลี่ยนรหัสผ่าน</string>
+    <string name="email_title">เปลี่ยนที่อยู่อีเมล</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!-- Notifications Preferences -->
+    <string name="notification_title">การแจ้งเตือน</string>
+    <string name="volume_title">ระดับเสียง</string>
+    <string name="summaryOn">คุณได้เปิดเสียงการแจ้งเตือน</string>
+    <string name="summaryOff">คุณได้ปิดเสียงการแจ้งเตือน</string>
+
+
+</resources>

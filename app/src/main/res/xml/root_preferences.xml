@@ -1,0 +1,61 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:keepScreenOn="true"
+    android:key="setting"
+    android:nestedScrollingEnabled="true"
+    android:orientation="vertical"
+    android:paddingStart="5dp"
+    app:isPreferenceVisible="true">
+
+    <PreferenceCategory
+        app:icon="@drawable/ic_profile"
+        app:title="@string/account_header">
+
+        <EditTextPreference
+            app:key="change_username"
+            app:title="@string/account_title"
+            app:useSimpleSummaryProvider="true" />
+        <EditTextPreference
+            app:key="change_password"
+            app:title="@string/password_title" />
+
+        <EditTextPreference
+            app:key="change_email"
+            app:title="@string/email_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue=""
+            app:entries="@array/language_entries"
+            app:entryValues="@array/language_values"
+            app:key="language"
+            app:title="เปลี่ยนภาษา"
+            app:useSimpleSummaryProvider="true" />
+        <Preference
+            app:key="logout"
+            app:title="ออกจากระบบ"></Preference>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        app:icon="@drawable/ic_notifications"
+        app:title="@string/notification_title"
+
+        >
+        <SwitchPreferenceCompat
+            app:key="Notifications"
+            app:summaryOff="@string/summaryOff"
+            app:summaryOn="@string/summaryOn"
+            app:title="@string/notification_title" />
+        <SeekBarPreference
+            app:defaultValue="100"
+            app:dependency="Notifications"
+            app:key="volume_notifications"
+            app:showSeekBarValue="true"
+            app:title="@string/volume_title" />
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

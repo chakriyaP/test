@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/loginPageFragment"
+        android:name="th.ac.kku.coe.swabook.ui.LoginPageFragment"
+        tools:layout="@layout/fragment_login_page">
+        <action
+            android:id="@+id/action_loginPageFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginPageFragment_to_feedFragment"
+            app:destination="@id/feedFragment"
+            app:popUpTo="@id/loginPageFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginPageFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookFragment"
+        android:name="th.ac.kku.coe.swabook.ui.BookFragment"
+        android:label="Book Detail"
+        tools:layout="@layout/fragment_book">
+        <argument
+            android:name="argBookName"
+            android:defaultValue="titleOfBook"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="argBookImg"
+            android:defaultValue="imageOfBook"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="argBookDetail"
+            android:defaultValue="detailOfBook"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="argBookAuthor"
+            android:defaultValue="authorOfBook"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_bookFragment_to_lendFragment"
+            app:destination="@id/lendFragment" />
+        <argument
+            android:name="argUserID"
+            android:defaultValue="userOfBook"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_bookFragment_to_ChatFragment"
+            app:destination="@id/ChatFragment" />
+        <argument
+            android:name="argDocPath"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_bookFragment_to_ChatFragment2"
+            app:destination="@id/ChatFragment" />
+        <action
+            android:id="@+id/action_bookFragment_to_AllChatFragment"
+            app:destination="@id/AllChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="th.ac.kku.coe.swabook.ui.FeedFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_feed">
+        <action
+            android:id="@+id/action_feedFragment_to_bookFragment"
+            app:destination="@id/bookFragment" />
+        <argument
+            android:name="argBookName"
+            android:defaultValue="titleOfBook"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="argBookImg"
+            android:defaultValue="imageOfBook"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="argBookAuthor"
+            android:defaultValue="authorOfBook"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="argBookDetail"
+            android:defaultValue="detailOfBook"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="argUserID"
+            android:defaultValue="userOfBook"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_feedFragment_to_loginPageFragment"
+            app:destination="@id/loginPageFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_myBookDetailFragment"
+            app:destination="@id/myBookDetailFragment" />
+        <argument
+            android:name="argDocPath"
+            app:argType="string"
+            android:defaultValue="pathOfBook" />
+        <argument android:name="argCategoryName"
+            app:argType="string"
+            android:defaultValue="bookCategory" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="th.ac.kku.coe.swabook.ui.RegisterFragment"
+        android:label="Swabook"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginPageFragment"
+            app:destination="@id/loginPageFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="th.ac.kku.coe.swabook.ui.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_ProfileFragment_to_loginPageFragment"
+            app:destination="@id/loginPageFragment"
+            app:popUpTo="@id/ProfileFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_ProfileFragment_to_myBookFragment"
+            app:destination="@id/myBookFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_ProfileFragment_to_editProfileFragment"
+            app:destination="@id/EditProfileFragment" />
+        <argument
+            android:name="argUserName"
+            app:argType="string" />
+        <argument
+            android:name="argUserImg"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_ProfileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="th.ac.kku.coe.swabook.ui.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_feedFragment"
+            app:destination="@id/feedFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_loginPageFragment"
+            app:destination="@id/loginPageFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="th.ac.kku.coe.swabook.ui.ResetPasswordFragment"
+        android:label="Swabook"
+        tools:layout="@layout/fragment_reset_password">
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_loginPageFragment"
+            app:destination="@id/loginPageFragment"
+            app:popUpTo="@id/resetPasswordFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/lendFragment"
+        android:name="th.ac.kku.coe.swabook.ui.LendFragment"
+        android:label="fragment_lend"
+        tools:layout="@layout/fragment_lend">
+        <action
+            android:id="@+id/action_lendFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PostFragment"
+        android:name="th.ac.kku.coe.swabook.ui.PostFragment"
+        android:label="fragment_post"
+        tools:layout="@layout/fragment_post">
+
+        <action
+            android:id="@+id/action_PostFragment_to_SuccessPostFragment"
+            app:destination="@id/SuccessPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SuccessPostFragment"
+        android:name="th.ac.kku.coe.swabook.ui.SuccessPostFragment"
+        android:label="fragment_success_post"
+        tools:layout="@layout/fragment_success_post">
+        <action
+            android:id="@+id/action_SuccessPostFragment_to_PostFragment"
+            app:destination="@id/PostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myBookFragment"
+        android:name="th.ac.kku.coe.swabook.ui.MyBookFragment"
+        android:label="fragment_mybook"
+        tools:layout="@layout/fragment_mybook">
+        <action
+            android:id="@+id/action_myBookFragment_to_ProfileFragment"
+            app:destination="@id/ProfileFragment"
+            app:popUpTo="@id/myBookFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_myBookFragment_to_myBookDetailFragment"
+            app:destination="@id/myBookDetailFragment"
+            app:popUpTo="@id/myBookFragment" />
+        <argument
+            android:name="argBookName"
+            android:defaultValue="titleOfBook"
+            app:argType="string" />
+        <argument
+            android:name="argBookImg"
+            android:defaultValue="imageOfBook"
+            app:argType="string" />
+        <argument
+            android:name="argBookDetail"
+            android:defaultValue="detailOfBook"
+            app:argType="string" />
+        <argument
+            android:name="argBookAuthor"
+            android:defaultValue="authorOfBook"
+            app:argType="string" />
+        <argument
+            android:name="argDocPath"
+            app:argType="string" />
+        <argument
+            android:name="argCategoryName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/myBookDetailFragment"
+        android:name="th.ac.kku.coe.swabook.ui.MyBookDetailFragment"
+        android:label="fragment_mybook_detail"
+        tools:layout="@layout/fragment_book">
+        <action
+            android:id="@+id/action_myBookDetailFragment_to_myBookEditFragment"
+            app:destination="@id/myBookEditFragment"
+            app:popUpTo="@id/myBookDetailFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="argBookName"
+            android:defaultValue="titleOfBook"
+            app:argType="string" />
+        <argument
+            android:name="argBookImg"
+            android:defaultValue="imageOfBook"
+            app:argType="string" />
+        <argument
+            android:name="argBookDetail"
+            android:defaultValue="detailOfBook"
+            app:argType="string" />
+        <argument
+            android:name="argBookAuthor"
+            android:defaultValue="authorOfBook"
+            app:argType="string" />
+        <argument
+            android:name="argDocPath"
+            app:argType="string" />
+        <argument
+            android:name="argCategoryName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/myBookEditFragment"
+        android:name="th.ac.kku.coe.swabook.ui.MyBookEditFragment"
+        android:label="fragment_mybook_edit"
+        tools:layout="@layout/fragment_mybook_edit">
+        <argument
+            android:name="argBookName"
+            android:defaultValue="titleOfBook"
+            app:argType="string" />
+        <argument
+            android:name="argBookImg"
+            android:defaultValue="imageOfBook"
+            app:argType="string" />
+        <argument
+            android:name="argBookDetail"
+            android:defaultValue="detailOfBook"
+            app:argType="string" />
+        <argument
+            android:name="argBookAuthor"
+            android:defaultValue="authorOfBook"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_myBookEditFragment_to_myBookFragment"
+            app:destination="@id/myBookFragment"
+            app:popUpTo="@id/myBookEditFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="argDocPath"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_myBookEditFragment_to_ProfileFragment"
+            app:destination="@id/ProfileFragment" />
+        <argument
+            android:name="argCategoryName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/SearchFragment"
+        android:name="th.ac.kku.coe.swabook.ui.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_SearchFragment_to_SearchShowFragment"
+            app:destination="@id/SearchShowFragment" />
+        <argument
+            android:name="argCategoryName"
+            app:argType="string" />
+        <argument
+            android:name="argSearchText"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/SearchShowFragment"
+        android:name="th.ac.kku.coe.swabook.ui.SearchShowFragment"
+        android:label="fragment_search_show"
+        tools:layout="@layout/fragment_search_show" >
+        <action
+            android:id="@+id/action_SearchShowFragment_to_SearchFragment"
+            app:destination="@id/SearchFragment" />
+        <argument
+            android:name="argCategoryName"
+            app:argType="string" />
+        <argument
+            android:name="argSearchText"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/AllChatFragment"
+        android:name="th.ac.kku.coe.swabook.ui.AllChatFragment"
+        android:label="fragment_all_chat"
+        tools:layout="@layout/fragment_all_chat" >
+        <action
+            android:id="@+id/action_AllChatFragment_to_ChatFragment"
+            app:destination="@id/ChatFragment" />
+        <argument
+            android:name="argUserID"
+            app:argType="string" />
+        <argument
+            android:name="argUserName"
+            app:argType="string" />
+        <argument
+            android:name="argUserImg"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/ChatFragment"
+        android:name="th.ac.kku.coe.swabook.ui.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_ChatFragment_to_AllChatFragment"
+            app:destination="@id/AllChatFragment" />
+        <argument
+            android:name="argUserID"
+            app:argType="string" />
+        <argument android:name="argUserName"
+            app:argType="string" />
+        <argument
+            android:name="argUserImg"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/EditProfileFragment"
+        android:name="th.ac.kku.coe.swabook.ui.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_ProfileFragment"
+            app:destination="@id/ProfileFragment" />
+        <argument
+            android:name="argUserName"
+            app:argType="string" />
+        <argument
+            android:name="argUserImg"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="th.ac.kku.coe.swabook.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_ProfileFragment"
+            app:destination="@id/ProfileFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_loginPageFragment"
+            app:destination="@id/loginPageFragment" />
+    </fragment>
+</navigation>

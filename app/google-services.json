@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "801525185088",
+    "project_id": "swabook-2020",
+    "storage_bucket": "swabook-2020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801525185088:android:404e0f094a1a48f37bbda5",
+        "android_client_info": {
+          "package_name": "th.ac.kku.coe.swabook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "801525185088-fun4i9f19qusa1ttmhaa90kkdj4t4c2v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "th.ac.kku.coe.swabook",
+            "certificate_hash": "a2b34e75c0c3faa38996956b8ee5d1d31c84b82f"
+          }
+        },
+        {
+          "client_id": "801525185088-af693rmum377ktepcbu4h9aeqcq5pfmk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDKM0IJZ37Xpzz-QXHIMt71GhS7lZfV50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "801525185088-af693rmum377ktepcbu4h9aeqcq5pfmk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
